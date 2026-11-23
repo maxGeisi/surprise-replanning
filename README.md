@@ -4,6 +4,17 @@ A state-based Diffusion Policy solves PushT while the block gets pushed away fro
 next to the policy and predicts the next state; when its prediction error is too large, the robot drops the rest of
 its action chunk and replans.
 
+## Why
+
+Diffusion Policy and similar policies predict a chunk of future actions and execute several of them before looking
+again. Between two plans the robot is blind: if the object moves, it first finishes the old plan. Replanning more often
+helps, but every policy call is expensive (here 10 denoising steps).
+
+The idea comes from predictive coding: the brain predicts the sensory consequences of its own movements, and a mismatch
+between prediction and input interrupts what it is doing (e.g. visuomotor mismatch responses in mouse V1, Keller et al.
+2012). So: keep executing chunks, run a cheap forward model next to the policy, and only replan early when the world did
+not do what was expected.
+
 ## Summary
 
 - Own Diffusion Policy (1D conditional UNet, 4.1M parameters), trained on 300 demos from a scripted expert:
@@ -71,6 +82,8 @@ jupyter nbconvert --execute --to notebook --inplace eval/eval.ipynb
 ```
 
 Trained weights are in `runs/`, all results in `eval/results/`.
+
+Developed locally and pushed in one go, so the commit history is short.
 
 ## References
 
