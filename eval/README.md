@@ -6,6 +6,7 @@ Everything after training. Run from the repo root.
 |---|---|---|
 | `benchmark.py` | all replanning strategies x all push sizes, 300 episodes each (~2 h on 2 cores, resumable) | `results/benchmark.json`, `results/episodes/` |
 | `detection.py` | how many pushes each detector notices at 1% false alarms (~5 min) | `results/detection.json` |
+| `make_video.py` | the side-by-side demo clip | `../media/demo.mp4`, `../media/demo.gif` (gif via ffmpeg) |
 | `eval.ipynb` | all plots + the paired-difference table, in the order below | `figs/`, `results/tables.md` |
 
 The notebook goes through the questions in the order I looked at them:

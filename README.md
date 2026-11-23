@@ -4,6 +4,11 @@ A state-based Diffusion Policy solves PushT while the block gets pushed away fro
 next to the policy and predicts the next state; when its prediction error is too large, the robot drops the rest of
 its action chunk and replans.
 
+![demo](media/demo.gif)
+
+Same start and same pushes on both sides; left replans every 16 steps, right also replans when surprised (red dots).
+One hand-picked episode, the numbers below are over 300 episodes. [mp4](media/demo.mp4)
+
 ## Background
 
 Diffusion Policy and similar policies predict a chunk of future actions and execute several of them before looking
@@ -79,12 +84,13 @@ python worldmodel.py         # world model
 python eval/benchmark.py     # all strategies x push sizes, ~2 h, resumable
 python eval/detection.py
 jupyter nbconvert --execute --to notebook --inplace eval/eval.ipynb
+python eval/make_video.py --seed 30033   # demo clip
 ```
 
 Trained weights are in `runs/`, all results in `eval/results/`.
 
-Developed locally and pushed in one go, so the commit history is short. The plotting code and figures were made with
-Claude (Anthropic).
+Developed locally and pushed in one go, so the commit history is short. The plotting code, figures and demo video were
+made with Claude (Anthropic).
 
 ## References
 
