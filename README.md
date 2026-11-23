@@ -4,7 +4,7 @@ A state-based Diffusion Policy solves PushT while the block gets pushed away fro
 next to the policy and predicts the next state; when its prediction error is too large, the robot drops the rest of
 its action chunk and replans.
 
-## Why
+## Background
 
 Diffusion Policy and similar policies predict a chunk of future actions and execute several of them before looking
 again. Between two plans the robot is blind: if the object moves, it first finishes the old plan. Replanning more often
@@ -83,7 +83,8 @@ jupyter nbconvert --execute --to notebook --inplace eval/eval.ipynb
 
 Trained weights are in `runs/`, all results in `eval/results/`.
 
-Developed locally and pushed in one go, so the commit history is short.
+Developed locally and pushed in one go, so the commit history is short. The plotting code and figures were made with
+Claude (Anthropic).
 
 ## References
 
