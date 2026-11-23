@@ -1,0 +1,38 @@
+{
+ "small": {
+  "surprise": {
+   "detected": 0.759075907590759,
+   "false_alarms": 0.009922077922077922,
+   "pushes": 303
+  },
+  "jump": {
+   "detected": 0.07920792079207921,
+   "false_alarms": 0.00909090909090909,
+   "pushes": 303
+  }
+ },
+ "medium": {
+  "surprise": {
+   "detected": 0.9367469879518072,
+   "false_alarms": 0.011941576668728294,
+   "pushes": 332
+  },
+  "jump": {
+   "detected": 0.6234939759036144,
+   "false_alarms": 0.00827822446358057,
+   "pushes": 332
+  }
+ },
+ "large": {
+  "surprise": {
+   "detected": 0.9903147699757869,
+   "false_alarms": 0.011416507018024005,
+   "pushes": 413
+  },
+  "jump": {
+   "detected": 0.9903147699757869,
+   "false_alarms": 0.009227039918676936,
+   "pushes": 413
+  }
+ }
+}
